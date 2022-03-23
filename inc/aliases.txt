@@ -1,0 +1,115 @@
+alias au='apt update'
+alias ai='apt install'
+alias afu='apt full-upgrade'
+alias ac='apt clean'
+alias aac='apt autoclean'
+alias aar='apt autoremove'
+alias update='apt update && apt -y full-upgrade'
+alias ..='cd ..'
+alias chx="chmod +x"
+alias md='mkdir -p'
+alias cpr="cp -r"
+alias fl='file'
+alias hex="xxd -p"
+alias psa="ps -axo pid,%cpu,%mem,command"
+alias psc="ps -axo pid,command"
+alias realpath="readlink -f"
+printeron() { systemctl start cups; systemctl start cups-browsed; }
+printeroff() { systemctl stop cups-browsed; systemctl stop cups; }
+alias duh='du -hs'
+alias dub='du -b'
+alias dd='dcfldd'
+alias rsync='rsync -rltuDv'
+alias rsyncnodot='rsync -rltDuv --exclude ".*" --delete'
+alias d="docker"
+alias db="docker build"
+alias de="docker exec"
+alias di="docker images"
+alias din="docker inspect"
+alias dr="docker run"
+alias drit="docker run -it"
+alias drm="docker rm"
+alias ds="docker stop"
+alias dsp="yes | docker system prune"
+alias dsv="yes | docker volume prune"
+alias dc="docker-compose"
+alias dcb="docker-compose build"
+alias dcb="docker-compose up"
+alias dcd="docker-compose down"
+alias ff='find . -type f -iname'
+alias fd='find . -type d -iname'
+alias fe='find . -type f -executable -iname'
+ffmin() { find . -type f -size +$1; }
+ffmax() { find . -type f -size -$1; }
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -m'
+alias gd='git diff'
+alias gck='git checkout'
+alias gcl='git clone'
+alias gcpk='git cherry-pick'
+alias gf='git fetch'
+alias gi='git init'
+alias gl='git log --pretty=oneline'
+alias gl5='git log -5'
+alias gm='git merge'
+alias gpl='git pull'
+alias gps='git push'
+alias gs='git status'
+alias gcl1="git clone -b master --single-branch --depth 1"
+alias gundo="git reset --hard HEAD"
+alias g='grep --color=auto'
+alias gr='grep --color=auto -r'
+alias gri='grep --color=auto -ri'
+alias gril='grep --color=auto -ril'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias hgrep='history | grep'
+alias py='python'
+alias py2='python2'
+alias py3='python3'
+alias ve="python3 -m venv venv"
+alias va="source venv/bin/activate"
+alias rb='ruby'
+alias pl='perl'
+alias rvm='source /usr/share/rvm/scripts/rvm'
+alias ls="ls --color=auto -pG"
+alias l='ls -1'
+alias ll='ls -alF'
+alias la='ls -1A'
+alias lh='ls -lh'
+alias lr="ls -1t"
+alias mk='make'
+alias mk4='make -j4'
+alias mk8='make -j8'
+alias mkc='make clean'
+alias mkv='make V=s'
+alias mkm='make menuconfig'
+alias sudo='sudo '
+alias open='xdg-open'
+alias now='date +%Y-%m-%d\ %H:%M:%S'
+solat() { sleep $1 && kdialog --msgbox "Solat!!!"; }
+repeat() { local n="$1"; shift; while ((n-- > 0)); do "$@"; done; }
+alias curl='curl -s'
+alias dig='dig +noall +answer'
+alias ping='ping -c 4 -i 0.5'
+alias nsl='nslookup'
+alias ns="netstat -pltn"
+alias s='ssh'
+alias t='telnet'
+alias sshv='ssh -v'
+alias sshk='killall ssh'
+alias sshc='rm -f ~/.ssh/known_hosts'
+alias lower="tr 'A-Z' 'a-z'"
+alias upper="tr 'a-z' 'A-Z'"
+alias nospace="tr -d ' '"
+alias title="sed 's/[^ ]\+/\L\u&/g'"
+alias quote="python -c 'import json; import sys; print json.dumps(sys.stdin.read())'"
+alias nocomment="grep -v ^#"
+alias nonewline="grep -v ^$"
+alias b64e="base64"
+alias b64d="base64 -d"
+alias pj='python -m json.tool'
+alias c='clear'
+alias q='exit'
