@@ -21,8 +21,9 @@ gem install lolcat
 figlet -f big Done !!! | lolcat
 sleep 2
 echo -e "$(curl -s https://raw.githubusercontent.com/mohmadhabib/TermuxBanner/master/inc/nTban.txt)" | lolcat
-echo -e "\e[1m All The Required Packages are Now Downloaded Successfully...!!!" | pv -qL 10
-echo -e "We Will Start Installing Your Banner Now ;)" | pv -qL 10
+echo -e "\e[1m All The Required Packages are Now Downloaded Successfully...!!!"
+sleep 2
+echo -e "We Will Start Installing Your Banner Now ;)"
 sleep 4
 clear
 figlet -f big Termux Banner | lolcat
