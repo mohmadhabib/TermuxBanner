@@ -1,3 +1,4 @@
+apt update -y && apt upgrade -y
 apt install figlet -y
 clear
 figlet -f big TermuxBanner
@@ -6,7 +7,6 @@ tcred="\033[0;31m"
 tcgreen="\033[0;32m"
 tcyellow="\033[0;33m"
 tcblue="\033[0;34m"
-apt update -y && apt upgrade -y
 echo -e "System Has Been Updated/Upgraded" | pv -qL 10
 echo -e "Now we Have to Start Installation of The Required Packages" | pv -qL 30
 sleep 3
