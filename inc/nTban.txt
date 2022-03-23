@@ -10,5 +10,5 @@
  |____/ \__,_|_| |_|_| |_|\___|_|
  
   - - Python - JavaScript - PHP - Bash Tools - -
-         GitHub: https://GitHub.com/DevSomad
+         GitHub: https://github.com/mohmadhabib
 
