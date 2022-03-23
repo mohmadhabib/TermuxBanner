@@ -33,13 +33,10 @@ red='\e[1;31m'
 yellow='\e[1;33m'
 echo -e "\e[1m\e[33m\nWhat is Your \e[31mBanner \e[33mName\e[32m :\n\n"
 read banner
-echo
-echo -e "\e[1m\e[33m\nYour Slogan (The Saying Down the Banner) \e[32m :\n\n "
-read slogan
-cp /data/data/com.termux/files/usr/etc/bash.bashrc bash.bashrc_BackUp
+cp /data/data/com.termux/files/usr/etc/bash.bashrc /data/data/com.termux/files/usr/etc/bash.bashrc_BackUp
 rm -rf /data/data/com.termux/files/usr/etc/motd
 echo -e "\n" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 echo "toilet -f big ' $banner' -F gay | lolcat" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-echo  "cowsay -f eyes "$slogan" | lolcat" >> /data/data/com.termux/files/usr/etc/bash.bashrc
 curl -s https://raw.githubusercontent.com/mohmadhabib/TermuxBanner/master/inc/aliases.txt >> /data/data/com.termux/files/usr/etc/bash.bashrc
 curl -s https://raw.githubusercontent.com/mohmadhabib/TermuxBanner/master/inc/colors.txt >> /data/data/com.termux/files/usr/etc/bash.bashrc
+source /data/data/com.termux/files/usr/etc/bash.bashrc
