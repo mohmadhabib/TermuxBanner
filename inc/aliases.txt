@@ -6,6 +6,7 @@ alias aac='apt autoclean'
 alias aar='apt autoremove'
 alias update='apt update && apt -y full-upgrade'
 alias ..='cd ..'
+alias .2='cd ../..'
 alias chx="chmod +x"
 alias md='mkdir -p'
 alias cpr="cp -r"
@@ -14,14 +15,14 @@ alias hex="xxd -p"
 alias psa="ps -axo pid,%cpu,%mem,command"
 alias psc="ps -axo pid,command"
 alias realpath="readlink -f"
-printeron() { systemctl start cups; systemctl start cups-browsed; }
-printeroff() { systemctl stop cups-browsed; systemctl stop cups; }
 alias duh='du -hs'
 alias dub='du -b'
 alias dd='dcfldd'
 alias rsync='rsync -rltuDv'
 alias rsyncnodot='rsync -rltDuv --exclude ".*" --delete'
 alias d="docker"
+alias dps='docker ps'
+alias dpsa='docker ps -a'
 alias db="docker build"
 alias de="docker exec"
 alias di="docker images"
@@ -66,9 +67,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hgrep='history | grep'
-alias py='python'
+alias py='python3'
 alias py2='python2'
-alias py3='python3'
+alias pi='python3 -m pip install'
+alias pi2='python2 -m pip install'
 alias ve="python3 -m venv venv"
 alias va="source venv/bin/activate"
 alias rb='ruby'
@@ -111,5 +113,19 @@ alias nonewline="grep -v ^$"
 alias b64e="base64"
 alias b64d="base64 -d"
 alias pj='python -m json.tool'
-alias c='clear'
+alias c='clear;source /data/data/com.termux/files/usr/etc/bash.bashrc'
+alias cl='clear'
 alias q='exit'
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+update ()
+{
+    apt update -y && upgrade -y
+    pkg update -y && upgrade -y
+    clear
+    echo 'Update Completed Successfully'
+    echo
+}
