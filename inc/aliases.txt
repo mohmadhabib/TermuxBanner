@@ -127,5 +127,5 @@ update ()
     pkg update -y && upgrade -y
     clear
     echo 'Update Completed Successfully'
-    echo
+    echo ''
 }
