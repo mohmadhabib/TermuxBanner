@@ -1,4 +1,6 @@
-echo -e "$(curl -s https://raw.githubusercontent.com/mohmadhabib/TermuxBanner/master/inc/Tban.txt)"
+apt install figlet -y
+clear
+figlet -f big TermuxBanner
 tcreset="\033[0m"
 tcred="\033[0;31m"
 tcgreen="\033[0;32m"
@@ -10,7 +12,6 @@ echo -e "Now we Have to Start Installation of The Required Packages" | pv -qL 30
 sleep 3
 clear
 apt install curl -y
-apt install figlet -y
 figlet Basic Installation
 apt install pv -y
 apt install toilet -y
@@ -26,7 +27,7 @@ sleep 2
 echo -e "We Will Start Installing Your Banner Now ;)"
 sleep 4
 clear
-figlet -f big Termux Banner | lolcat
+figlet -f big TermuxBanner | lolcat
 cyan='\e[0;36m'
 lightgreen='\e[1;32m'
 red='\e[1;31m'
